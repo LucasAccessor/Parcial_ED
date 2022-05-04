@@ -18,11 +18,26 @@ public class Fila {
 	
 	// método para desenfileirar um elemento da fila, ou seja, remover o primeiro elemento
 	public void desenfileirar() {
+		No aux = inicio;
 		
+		if(inicio == null) { //quando tenta retirar sem caminhões
+			System.out.println("não existem caminhões na fila!");
+		} else if(inicio == fim) { // quando só existe 1 caminhão na fila
+			inicio = null;
+			fim = null;
+		} else {
+			aux.dir.esq = null;
+			inicio = aux.dir;
+			aux.dir = null;
+		}
 	}
 	
 	// método para exibir os dados (nome e placa) dos motoristas
 	public void mostrarDados() {
-		
+		No aux = inicio;
+		while(aux != null) {
+			System.out.println("Nome: " + aux.motorista.getNome() + ", Placa: " + aux.motorista.getPlaca() );
+			aux = aux.dir ;
+		}
 	}
 }
