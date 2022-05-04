@@ -14,6 +14,7 @@ public class Main {
 		
 		// impressão dos objetos inseridos na lista
 		
-
+		lista.imprimir();
+		
 	}
 }
