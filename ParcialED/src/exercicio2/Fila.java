@@ -20,7 +20,7 @@ public class Fila {
 	public void desenfileirar() {
 		No aux = inicio;
 		
-		if(inicio == null) { //quando tenta retirar sem caminhões
+		if(inicio == null && fim == null) { //quando tenta retirar sem caminhões
 			System.out.println("não existem caminhões na fila!");
 		} else if(inicio == fim) { // quando só existe 1 caminhão na fila
 			inicio = null;

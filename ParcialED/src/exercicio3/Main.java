@@ -20,6 +20,27 @@ public class Main { //FEiTO POR LUCAS ACcESsOR
 	}
 	
 	public static void inverter(Lista lista) {
+		//1 - 2 - 3 - 4
+		 No inv = lista.inicio, aux;
 		
+		while(inv != null) {
+			if(inv == lista.inicio){ //inverte o primeiro elemento
+				inv.esq = inv.dir;
+				inv.dir = null;
+				inv = inv.esq; 
+			} else if(inv != lista.fim){
+				aux = inv.esq;
+				inv.esq = inv.dir;
+				inv.dir = aux;
+				inv = inv.esq;
+			} else {
+				inv.dir = inv.esq;
+				inv.esq = null;
+				break;
+			}
+		}
+		aux = lista.inicio;
+		lista.inicio = lista.fim;
+		lista.fim = aux;
 	}
 }
