@@ -13,6 +13,7 @@ public class Main { //FEiTO POR LUCAS ACcESsOR
 		lista.inserir(5);
 		
 		// inverte os elementos da lista
+		//lista.imprimir();
 		inverter(lista);
 		
 		// imprime os elementos da lista

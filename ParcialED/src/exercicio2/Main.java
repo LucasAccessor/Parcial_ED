@@ -5,6 +5,7 @@ public class Main { //FEiTO POR LUCAS ACcESsOR
 		
 		Fila fila = new Fila();
 		
+		//fila.desenfileirar();
 		// inserção dos dados na fila
 		fila.enfileirar(new Motorista("Selmini", "ABC-4546"));
 		fila.enfileirar(new Motorista("Flávio", "BYZ-7576"));
